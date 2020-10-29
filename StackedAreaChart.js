@@ -141,9 +141,9 @@ export default function StackedAreaChart(container){
             .attr('class', 'updatearea')
             .attr("fill", d=>colorScale(d.key))
             .attr("clip-path", "url(#clip)")
-            .on("mouseover", (event, (d), i) => tooltip.text((d.key)))
-            .on("mouseout", (event, (d)) => tooltip.text(""))
-            .on("click", (event, (d)) => {
+            .on("mouseover", (event, d, i) => tooltip.text((d.key)))
+            .on("mouseout", (event, d) => tooltip.text(""))
+            .on("click", (event, d) => {
                     selected = d.key;
                     svg.selectAll('path').remove()
                     chartupdate(selected, info, svg)
