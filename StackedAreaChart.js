@@ -156,6 +156,7 @@ export default function StackedAreaChart(container){
 
    function filterByDate(range){
        xDomain = range;
+       console.log(xDomain);
        if (selected != null){chartupdate(selected, data, svg)}
        else {update(data);
        }
